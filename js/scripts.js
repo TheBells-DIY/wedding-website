@@ -208,33 +208,58 @@ $(document).ready(function () {
 
 
     /********************** RSVP **********************/
-    $('#rsvp-form').on('submit', function (e) {
+    $('#rsvp-form-yes').on('submit', function (e) {
         e.preventDefault();
         var data = $(this).serialize();
 
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+        $('#alert-wrapper-yes').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
-        if (MD5($('#invite_code').val()) !== 'afdec7005cc9f14302cd0474fd0f3c96'
-            && MD5($('#invite_code').val()) !== '84d2004bf28a2095230e8e14993d398d') {
-            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
+        if (MD5($('#invite_code_yes').val()) !== 'afdec7005cc9f14302cd0474fd0f3c96'
+            && MD5($('#invite_code_yes').val()) !== '84d2004bf28a2095230e8e14993d398d') {
+            $('#alert-wrapper-yes').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
             $.post('https://script.google.com/macros/s/AKfycbwsWtOaYq6PH-R9fpQFzmKBG9SmvwJzqnuHrSTHTwk4slJ4gfiI/exec', data)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
-                        $('#alert-wrapper').html(alert_markup('danger', data.message));
+                        $('#alert-wrapper-yes').html(alert_markup('danger', data.message));
                     } else {
-                        $('#alert-wrapper').html('');
-                        $('#rsvp-modal').modal('show');
+                        $('#alert-wrapper-yes').html(alert_markup('success', '<strong>Success!</strong> Your RSVP has been submitted.'));
                     }
                 })
                 .fail(function (data) {
                     console.log(data);
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+                    $('#alert-wrapper-yes').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
                 });
         }
     });
 
+
+$('#rsvp-form-no').on('submit', function (e) {
+    e.preventDefault();
+    var data = $(this).serialize();
+
+    $('#alert-wrapper-no').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+
+    if (MD5($('#invite_code_no').val()) !== 'afdec7005cc9f14302cd0474fd0f3c96'
+        && MD5($('#invite_code_no').val()) !== '84d2004bf28a2095230e8e14993d398d') {
+        $('#alert-wrapper-no').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
+    } else {
+        $.post('https://script.google.com/macros/s/AKfycbwsWtOaYq6PH-R9fpQFzmKBG9SmvwJzqnuHrSTHTwk4slJ4gfiI/exec', data)
+            .done(function (data) {
+                console.log(data);
+                if (data.result === "error") {
+                    $('#alert-wrapper-no').html(alert_markup('danger', data.message));
+                } else {
+                    $('#alert-wrapper-no').html(alert_markup('success', '<strong>Success!</strong> Your RSVP has been submitted.'));
+                }
+            })
+            .fail(function (data) {
+                console.log(data);
+                $('#alert-wrapper-no').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+            });
+    }
+});
 });
 
 /********************** Extras **********************/

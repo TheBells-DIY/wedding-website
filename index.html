@@ -47,12 +47,13 @@
                         <ul class="primary-nav">
                             <li><a href="#intro">How we met</a></li>
                             <li><a href="#events">Events</a></li>
+                            <li><a href="#References">References</a></li>
                             <li><a href="#instagram">Photos</a></li>
                             <li><a href="#eng-pics">Engagement</a></li>
-                            <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the city</a></li>
+                            <li class="hidden-sm hidden-xs"><a href="#video-bg">Travel</a></li>
+                            <li><a href="#map" class="login">Venue</a></li>
                         </ul>
                         <ul class="member-actions">
-                            <li><a href="#map" class="login">Venue</a></li>
                             <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
                         </ul>
                     </nav>
@@ -176,9 +177,6 @@
 
                     <h5>Reception <span class="time">5PM-10PM</span></h5>
                     <p>Info for the reception here <br>
-                    <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-menu">
-                        <i class="fa fa-cutlery"></i>&nbsp;&nbsp;Menu
-                    </a>
                 </p>
                 </div>
                 <div class="wp6">
@@ -187,10 +185,21 @@
                 </div>
             </div>
         </div>
+        <section id="References">
         <div class="row section-padding">
             <div class="col-md-4 col-md-offset-4 text-center">
-                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
-                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress code
+                <h3>Quick References</h3>
+
+                        <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
+                            <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress code
+                        </a>
+                        <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-gifts">
+                            <i class="fa fa-barcode"></i>&nbsp;&nbsp;Gifts
+                        </a>
+
+
+                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-menu">
+                    <i class="fa fa-cutlery"></i>&nbsp;&nbsp;Menu
                 </a>
             </div>
         </div>
@@ -240,6 +249,21 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+    <div id="dc-gifts" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+                    <h3 class="text-center section-padding">Gifties</h3>
+                    <h5>Links for gifts below</h5>
+                    <p>
+                    Amazon
+                    all that
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
 </section>
 
@@ -248,10 +272,10 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <h3>A picture is worth a thousand words!</h3>
-                <p>Help us capture the moment, send your photos and videos to The Wedding Bells at
+                Help us capture the moment, send your photos and videos to The Wedding Bells at
                 </br>
                     <a href="7047690145" target="_blank">(704) 769-0145</a>
-                </p>
+                
             </div>
         </div>
         <div class="row section-border wp7">
@@ -454,9 +478,9 @@
                                     class="fa fa-hotel"></i>&nbsp;&nbsp;Book Hotel</a>
                         </div>
                         <div class="col-md-6" style="padding: 5px;">
-                            <a class="btn btn-fill btn-small"
-                               href="https://cdn.lyft.com/static/widgets/embed.html?location_street_address=161%20Greenridge%20Rd&location_city=Weaverville&location_postal_code=28787&theme=light&button_size=small&referrer=https://www.TheWrightBell.com&text_color="><i
-                                    class="fa fa-taxi"></i>&nbsp;&nbsp;Book Lyft</a>
+                            <a class="btn btn-fill btn-small" data-toggle="modal" data-target="#modal-lyft">
+                                <i class="fa fa-taxi"></i>&nbsp;&nbsp;Book Lyft
+                            </a>
                         </div>
                     </div>
                     <div class="row text-center">
@@ -464,12 +488,29 @@
                             <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
                                 map</a>
                     </div>
-                    
+                    <div id="modal-lyft" class="modal fade" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                                    </button>
+                                    <div class="section-padding">
+                                        <h3>Book a Lift</h3>
+                                        <iframe width="275" height="70" sandbox="allow-scripts allow-forms allow-top-navigation-by-user-activation"
+  src="https://cdn.lyft.com/static/widgets/embed.html?location_street_address=Emerald%20Ridge%20Farm%20%26%20Event%20Center%2C%20161%20Greenridge%20Rd&location_city=Weaverville%2C%20NC&location_postal_code=28787&theme=light&button_size=&referrer=www.thewrightbell.com&text_color="
+  frameborder=0></iframe>
+                                    </div>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
 
 <section class="rsvp text-center" id="rsvp">
 
@@ -492,69 +533,146 @@
             <div class="col-md-6 col-md-offset-3">
                 <h3>What are you waiting for!?</h3>
                 <p>We would greatly appreciate if you could RSVP before 1st of September 2022</p>
-                <form id="rsvp-form" class="rsvp-form"
-                      action=""
-                      method="POST">
-                      <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                     placeholder="Your Email"
-                                                                     required>
+                <a class="btn btn-fill btn-small" data-toggle="modal" data-target="#dc-rsvp-no">
+                    <i class="dc-rsvp-no"></i>&nbsp;&nbsp;Sorry we can't make it
+                </a>
+                <a class="btn btn-fill btn-small" data-toggle="modal" data-target="#dc-rsvp-yes">
+                    <i class="dc-rsvp-yes"></i>&nbsp;&nbsp;We're ready to party!
+                </a>
+                <!---NEed to add a row here for seperation-->
+                <div id="dc-rsvp-yes" class="modal fade" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <form id="rsvp-form-yes" class="rsvp-form"
+                                action=""
+                                method="POST">
+                                <div class="row">
+                                  <div class="col-md-6 col-sm-6">
+                                      <div class="form-input-group">
+                                          <i class="fa fa-envelope"></i><input type="email" name="email" class=""
+                                                                               placeholder="Your Email"
+                                                                               required>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6 col-sm-6">
+                                      <div class="form-input-group">
+                                          <i class="fa fa-user"></i><input name="name" class=""
+                                                                           placeholder="Your Name"
+                                                                           required>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6 col-sm-6">
+                                      <div class="form-input-group">
+                                          <i class="fa fa-cutlery"></i>
+                                              <input name="food" class="" min="0"
+                                                  placeholder="Chicken or Fish"
+                                                  required>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6 col-sm-6">
+                                      <div class="form-input-group">
+                                          <i class="fa fa-music"></i><input name="song"
+                                          class="" min="0"
+                                          placeholder="Song Request"
+                                          required>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6 col-sm-6">
+                                      <div class="form-input-group">
+                                          <i class="fa fa-users"></i><input name="guests" class="" min="0"
+                                          max="4" value="0"
+                                          placeholder="Additional Guests"
+                                          required>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6 col-sm-6">
+                                      <div class="form-input-group">
+                                          <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code_yes"
+                                                                          class="" min="0"
+                                                                          placeholder="Invite code"
+                                                                          required>
+                                      </div>
+                                  </div>
+                              </div>
+                              <input type="hidden" name="attending" value="yes">
+                              <div class="row">
+                                  <div class="col-md-12" id="alert-wrapper-yes"></div>
+                              </div>
+                              <button class="btn-fill rsvp-btn">
+                                  Im in!
+                              </button>
+                          </form>
+                                
                             </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-user"></i><input name="name" class=""
-                                                                 placeholder="Your Name"
-                                                                 required>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+                <div id="dc-rsvp-no" class="modal fade" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <form id="rsvp-form-no" class="rsvp-form"
+                                action=""
+                                method="POST">
+                                <div class="row">
+                                  <div class="col-md-6 col-sm-6">
+                                      <div class="form-input-group">
+                                          <i class="fa fa-envelope"></i><input type="email" name="email" class=""
+                                                                               placeholder="Your Email"
+                                                                               required>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6 col-sm-6">
+                                      <div class="form-input-group">
+                                          <i class="fa fa-user"></i><input name="name" class=""
+                                                                           placeholder="Your Name"
+                                                                           required>
+                                      </div>
+                                  </div>
+                                </div>
+
+                                <input name="food" class="" min="0" type="hidden"
+                                                  placeholder="Chicken or Fish" value="NA"
+                                                  required>
+
+                                 <input type="hidden" name="song"
+                                          class="" min="0" value="NA"
+                                          placeholder="Song Request"
+                                          required>
+                                <input type="hidden" name="guests" class="" min="0"
+                                          max="4" value="0"
+                                          placeholder="Additional Guests"
+                                          required>
+                                <div class="row">
+
+                                      
+                                  <div class="col-md-6 col-sm-6">
+                                      <div class="form-input-group">
+                                          <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code_no"
+                                                                          class="" min="0"
+                                                                          placeholder="Invite code"
+                                                                          required>
+                                      </div>
+                                  </div>
+                                </div>
+                                <input type="hidden" name="attending" value="no">
+                                <div class="row">
+                                  <div class="col-md-12" id="alert-wrapper-no"></div>
+                                </div>
+                                <button class="btn-fill rsvp-btn">
+                                  Can't make it, sorry!
+                                </button>
+                                </form>
+                                
                             </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-cutlery"></i>
-                                    <input name="food" class="" min="0"
-                                        placeholder="Chicken or Fish"
-                                        required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-music"></i><input name="song"
-                                class="" min="0"
-                                placeholder="Song Request"
-                                required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="guests" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Additional Guests"
-                                                                  required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Invite code"
-                                                                required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12" id="alert-wrapper"></div>
-                    </div>
-                    <button class="btn-fill rsvp-btn">
-                        Yes,
-                        that's me!
-                    </button>
-                </form>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
             </div>
         </div>
     </div>
