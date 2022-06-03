@@ -187,17 +187,17 @@ $(document).ready(function () {
             title: "Ram and Antara's Wedding",
 
             // Event start date
-            start: new Date('Nov 27, 2017 10:00'),
+            start: new Date('Oct 29, 2022 13:00'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Oct 29, 2022 13:00'),
+            end: new Date('Oct 29, 2022 22:00'),
 
             // Event Address
-            address: 'Emerald Ridge Farm & Event Center, Weaverville NC',
+            address: 'Emerald Ridge Farm & Event Center, 161 Greenridge Rd, Weaverville, NC 28787',
 
             // Event Description
             description: "We can't wait to see you on our big day. For any queries or issues, please contact Mike at 704-236-2205."
