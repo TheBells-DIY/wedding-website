@@ -194,13 +194,13 @@ $(document).ready(function () {
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Nov 29, 2017 00:00'),
+            end: new Date('Oct 29, 2022 13:00'),
 
             // Event Address
-            address: 'ITC Fortune Park Hotel, Kolkata',
+            address: 'Emerald Ridge Farm & Event Center, Weaverville NC',
 
             // Event Description
-            description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Amit Roy at +91 9876543210."
+            description: "We can't wait to see you on our big day. For any queries or issues, please contact Mike at 704-236-2205."
         }
     });
 
@@ -214,11 +214,11 @@ $(document).ready(function () {
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
-        if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40'
-            && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
+        if (MD5($('#invite_code').val()) !== 'afdec7005cc9f14302cd0474fd0f3c96'
+            && MD5($('#invite_code').val()) !== '84d2004bf28a2095230e8e14993d398d') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
-            $.post('https://script.google.com/macros/s/AKfycbzUqz44wOat0DiGjRV1gUnRf4HRqlRARWggjvHKWvqniP7eVDG-/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbwsWtOaYq6PH-R9fpQFzmKBG9SmvwJzqnuHrSTHTwk4slJ4gfiI/exec', data)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
@@ -241,21 +241,44 @@ $(document).ready(function () {
 
 // Google map
 function initMap() {
-    var location = {lat: 22.5932759, lng: 88.27027720000001};
+    var location = {lat: 35.716952452344636, lng: -82.57582175039441};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
+        zoom: 13,
         center: location,
         scrollwheel: false
     });
 
     var marker = new google.maps.Marker({
-        position: location,
-        map: map
+        position: {lat: 35.727467264579275, lng: -82.58700083133184},
+        map: map,
+        title: 'Emerald Ridge Farm & Event Center',
+        label: {
+            text: 'Emerald Ridge Farm & Event Center',
+            color: 'brown',
+            fontWeight: 'bold'
+        }
+      });
+      google.maps.event.addListener(marker, 'click', function() {
+        window.location.href = 'https://www.google.com/maps/place/Emerald+Ridge+Farm+%26+Event+Center/@35.7205163,-82.5873556,13z/data=!4m16!1m10!4m9!1m0!1m6!1m2!1s0x885a210f9c8d3d67:0xbcbc33d7cf69332e!2sEmerald+Ridge+Farm+%26+Event+Center,+161+Greenridge+Rd,+Weaverville,+NC+28787!2m2!1d-82.586915!2d35.726875!3e0!3m4!1s0x0:0xbcbc33d7cf69332e!8m2!3d35.726875!4d-82.586915';
     });
+      var marker2 = new google.maps.Marker({
+        position: {lat: 35.703199794942975, lng: -82.56920598432626},
+        map: map,
+        title: 'Fairfield Inn & Suites by Marriott',
+        label: {
+            text: 'Fairfield Inn & Suites by Marriott',
+            color: 'brown',
+            fontWeight: 'bold'
+        }
+      });
+      google.maps.event.addListener(marker2, 'click', function() {
+        window.location.href = 'https://www.google.com/maps/place/Fairfield+Inn+%26+Suites+by+Marriott+Asheville+Weaverville/@35.7064392,-82.5725526,15z/data=!4m19!1m10!4m9!1m0!1m6!1m2!1s0x885a210f9c8d3d67:0xbcbc33d7cf69332e!2sEmerald+Ridge+Farm+%26+Event+Center,+161+Greenridge+Rd,+Weaverville,+NC+28787!2m2!1d-82.586915!2d35.726875!3e0!3m7!1s0x885a21c812884435:0x7105f3d644565355!5m2!4m1!1i2!8m2!3d35.7025725!4d-82.5692489';
+    });
+      
 }
 
 function initBBSRMap() {
-    var la_fiesta = {lat: 20.305826, lng: 85.85480189999998};
+    var la_fiesta = {lat: 35.727467264579275, lng: -82.58700083133184};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: la_fiesta,
